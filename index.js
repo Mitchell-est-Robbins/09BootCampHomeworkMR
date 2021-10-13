@@ -6,25 +6,8 @@ const generateMarkdown = require('./utils/generateMarkdown')
 
 
 // TODO: Create an array of questions for user input
-const questions = [];
-
-// TODO: Create a function to write README file
-
-// function writeToFile(fileName, data) {
-//     //this is a hint??
-//     fs.writeFile(generateMarkdown(data)) //-------------this could be its own thing it is its own thing in generateMarkdown.js
-
-// }
-
-// TODO: Create a function to initialize app  
-//whatever code needs to fire first
-
-
-function init() {
-    //this console log is for when you do node index.js 
-    console.log("init is calling and this is starting") //============== the skeleton of  this code came from TA Christian during office hours
-    inquirer.prompt([       //----this is like activity 20--------------use the const question array?/
-        {type: "input",
+const questions = [
+    {type: "input",
         message: "What is your github username?",
         name: "A",
      },
@@ -60,8 +43,27 @@ function init() {
         message: 'what does user need to know about contributing to repo?',
         name: 'I',
      },
+];
 
-    ]).then((data)=>{
+// TODO: Create a function to write README file
+
+// function writeToFile(fileName, data) {
+//     //this is a hint??
+//     fs.writeFile(generateMarkdown(data)) //-------------this could be its own thing it is its own thing in generateMarkdown.js
+
+// }
+
+// TODO: Create a function to initialize app  
+//whatever code needs to fire first
+
+
+function init() {
+    //this console log is for when you do node index.js 
+    console.log("init is calling and this is starting") //============== the skeleton of  this code came from TA Christian during office hours
+    inquirer.prompt(questions   //questions from const    //----this is like activity 20--------------use the const question array?/
+
+
+    ).then((data)=>{
         console.log(data);              //----------------------------------------------so this actually gets results they just aren't formatted
         fs.writeFile("README.md", JSON.stringify(data, null, '\n', ), (err)=>
         err ? console.log(err) : console.log ("Success!")
@@ -80,4 +82,4 @@ init();
 // fs.writeFile('README.md', data.a.toString(), (err)=>{     //================from TA christian
 //     if (err){console.log(inquirer.red (err))}
 //     else{console.log(inquirer.blue)}
-// } )
+// } 
