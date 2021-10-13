@@ -2,6 +2,7 @@
 // const xxxxxxx = require('inquirer'); ========================give it a name and delete this activity 20 could even call it inquirer
 const fs= require('fs');
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown')
 
 
 // TODO: Create an array of questions for user input
@@ -11,7 +12,7 @@ const questions = [];
 
 // function writeToFile(fileName, data) {
 //     //this is a hint??
-//     fs.writeFile(generatMarkdown(data)) //-------------this could be its own thing
+//     fs.writeFile(generateMarkdown(data)) //-------------this could be its own thing it is its own thing in generateMarkdown.js
 
 // }
 
@@ -22,7 +23,7 @@ const questions = [];
 function init() {
     //this console log is for when you do node index.js 
     console.log("init is calling and this is starting") //============== the skeleton of  this code came from TA Christian during office hours
-    inquirer.prompt([       //----this is like activity 20
+    inquirer.prompt([       //----this is like activity 20--------------use the const question array?/
         {type: "input",
         message: "What is your github username?",
         name: "A",
