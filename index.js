@@ -8,37 +8,75 @@ const inquirer = require('inquirer');
 const questions = [];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    //this is a hint??
-    fs.writeFile(generatMarkdown(data))
 
- 
-}
+// function writeToFile(fileName, data) {
+//     //this is a hint??
+//     fs.writeFile(generatMarkdown(data)) //-------------this could be its own thing
 
-// TODO: Create a function to initialize app
+// }
+
+// TODO: Create a function to initialize app  
 //whatever code needs to fire first
+
 
 function init() {
     //this console log is for when you do node index.js 
     console.log("init is calling and this is starting") //============== the skeleton of  this code came from TA Christian during office hours
     inquirer.prompt([       //----this is like activity 20
         {type: "input",
-        message: "",
+        message: "What is your github username?",
         name: "A",
-    }
+     },
+        {type: 'input',
+        message: 'What is your email address?',
+        name: 'B',
+     },
+        {type: 'input',
+        message: 'What is the Project Name?',
+        name: 'C',
+     },
+        {type: 'input',
+        message: 'Write a short description of the project',
+        name: 'D',
+     },
+        {type: 'input',
+        message: 'What licenses should the project have',  //-----maybe multichoice
+        name: 'E',
+     },
+        {type: 'input',
+        message: 'List command to install dependencies',
+        name: 'F',
+     },
+        {type: 'input',
+        message: 'Command to run tests?',
+        name: 'G',
+     },
+        {type: 'input',
+        message: 'What does user need to know about using repo?',
+        name: 'H',
+     },
+        {type: 'input',
+        message: 'what does user need to know about contributing to repo?',
+        name: 'I',
+     },
 
     ]).then((data)=>{
-           // fs.writeFile('README.md', data.a.toString(), (err)=>{     //================from TA christian
-    //     if (err){console.log(inquirer.red (err))}
-    //     else{console.log(inquirer.blue)}
-    // } )
-    })
-
+        console.log(data);              //----------------------------------------------so this actually gets results they just aren't formatted
+        fs.writeFile("README.md", JSON.stringify(data, null, '\n', ), (err)=>
+        err ? console.log(err) : console.log ("Success!")
+        );
+    });
+    
 }
+
 
 // Function call to initialize app
 init();
 
 //===========================================================================================================
-//to turn this in you have to show in video no narration. just show the md cook off
+//to turn this in you have to show in video no narration... added to the README  just show the md cook off
 //===========================================================================================================
+// fs.writeFile('README.md', data.a.toString(), (err)=>{     //================from TA christian
+//     if (err){console.log(inquirer.red (err))}
+//     else{console.log(inquirer.blue)}
+// } )
