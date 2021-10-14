@@ -55,17 +55,16 @@ const questions = [
 
 // TODO: Create a function to initialize app  
 //whatever code needs to fire first
-
+//-------------------------------------------------------------------there needs to be a destructured object of with the answers `${}` into the markdown
 
 function init() {
     //this console log is for when you do node index.js 
     console.log("init is calling and this is starting") //============== the skeleton of  this code came from TA Christian during office hours
     inquirer.prompt(questions   //questions from const    //----this is like activity 20--------------use the const question array?/
 
-
     ).then((data)=>{
         console.log(data);              //----------------------------------------------so this actually gets results they just aren't formatted
-        fs.writeFile("README.md", JSON.stringify(data, null, '\n', ), (err)=>
+        fs.writeFile("README.md", JSON.stringify(data, '\n', ), (err)=>
         err ? console.log(err) : console.log ("Success!")
         );
     });
