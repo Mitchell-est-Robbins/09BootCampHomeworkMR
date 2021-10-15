@@ -7,7 +7,7 @@ const generateMarkdown = require('./utils/generateMarkdown')
 const promptUser = () => {
  return inquirer.prompt ([
     {type: "input",
-        message: "What is your github link?",
+        message: "What is your github name?",
         name: "A",
      },
         {type: 'input',
@@ -22,8 +22,9 @@ const promptUser = () => {
         message: 'Write a short description of the project',
         name: 'D',
      },
-        {type: 'input',
-        message: 'What licenses should the project have',  //-----maybe multichoice //I choose a license for my application from a list of options
+        {type: 'checkbox',
+        message: 'What licenses should the project have',
+        choices: licenseArray,  
         name: 'E',
      },
         {type: 'input',
