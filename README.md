@@ -1,11 +1,21 @@
-### ME,
- ### ME@ME,
- # ME PROJECT,
+# ** HW09 README.md Generator **
+### VookmirVookmir
+### VookmirVookmir@gmail.com
+ 
 
- ITTHTLE LRJ ELSJFSLE FJSL FEJLEJF EF
- NPM INQUIRER
- NPM I 
- N/A
- It IS SHIT 
- It IS NOT
+ ##The intent of this project is to create a program that allows for the quick creation of a README for potential new project.
+ ![alt text](image.jpg)
+ ![alt text](image.jpg)
+ ![alt text](image.jpg)
+
+
+ MIT, NPM, Inquirer
+
+ npm i 
+
+ n/a
+
+ it will not be maintained
+
+ you cannot contribute
 

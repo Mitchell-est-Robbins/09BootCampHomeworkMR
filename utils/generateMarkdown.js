@@ -12,16 +12,25 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = ({A, B, C, D, E, F, G, H, I,}) =>
-`# ${C}
+`# ** ${C} **
 ### ${A}
 ### ${B}
- -------------------------
+ 
 
- ${D}
+ ## ${D}
+ ![alt text](image.jpg)
+ ![alt text](image.jpg)
+ ![alt text](image.jpg)
+
+
  ${E}
+
  ${F}
+
  ${G}
+
  ${H}
+
  ${I}
 
 `;

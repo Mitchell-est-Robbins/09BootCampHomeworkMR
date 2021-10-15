@@ -1,5 +1,3 @@
-// TODO: Include packages needed for this application
-// const xxxxxxx = require('inquirer'); ========================give it a name and delete this activity 20 could even call it inquirer
 const fs= require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown')
@@ -48,6 +46,27 @@ const promptUser = () => {
 };
 
 
+// ==================bits from miniproject==============================
+const init = () => {
+   promptUser()
+   // Use writeFileSync method to use promises instead of a callback function
+   .then((answers) => fs.writeFileSync('README.md', generateMarkdown(answers)))
+   .then(() => console.log('Success'))
+   .catch((err) => console.error(err));
+};
+
+
+
+
+
+// Function call to initialize app
+init();
+
+//===========================================================================================================
+//to turn this in you have to show in video no narration... added to the README  just show the md cook off
+//===========================================================================================================
+
+
 // TODO: Create a function to initialize app  
 
 //-------------------------------------------------------------------there needs to be a destructured object of with the answers `${}` into the markdown
@@ -66,23 +85,3 @@ const promptUser = () => {
 //    });
     
 // }
-
-// ==================bits from miniproject==============================
-const init = () => {
-   promptUser()
-   // Use writeFileSync method to use promises instead of a callback function
-     .then((answers) => fs.writeFileSync('README.md', generateMarkdown(answers)))
-     .then(() => console.log('Success'))
-     .catch((err) => console.error(err));
- };
- 
-//  init();
- 
-
-
-// Function call to initialize app
-init();
-
-//===========================================================================================================
-//to turn this in you have to show in video no narration... added to the README  just show the md cook off
-//===========================================================================================================
