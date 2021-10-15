@@ -26,8 +26,6 @@ An easy to use tool for generating professional READMEs; quickly, for new projec
 
 --------
 
-<iframe src="https://drive.google.com/file/d/18SSVlfH20dG8jl6xfXUQTe6jzDj_IR6F/preview" width="640" height="480"></iframe>
-
 https://watch.screencastify.com/v/ebeCgPNv81ITMhh6mmjx
 
 ---------
@@ -46,20 +44,37 @@ https://watch.screencastify.com/v/ebeCgPNv81ITMhh6mmjx
 ## **Questions:**
 
 ### **What licenses are needed?**
+NPM, Inquirer
 
- ##The intent of this project is to create a program that allows for the quick creation of a README for potential new project.
- ![alt text](image.jpg)
- ![alt text](image.jpg)
- ![alt text](image.jpg)
+<br/><br/> 
 
+### **Installation**
+npm -i
 
- MIT, NPM, Inquirer
+<br/><br/> 
 
- npm i 
+### **Testing** 
+There are no tests
 
- n/a
+<br/><br/> 
 
- it will not be maintained
+### **Will it be maintained?** 
+it will not be maintained
 
- you cannot contribute
+<br/><br/> 
 
+### **Can I contribute?** 
+You cannot contribute
+
+<br/><br/> 
+
+--------
+
+## **Contact me:**
+### https://github.com/VookmirVookmir
+###  vookmirvookmir@gmail.com
+
+----------
+
+## **Ideas for improvement:**
+badges, lots of dynamically generated badges

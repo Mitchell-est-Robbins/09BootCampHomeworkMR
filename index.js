@@ -3,11 +3,11 @@ const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown')
 
 
-// TODO: Create an array of questions for user input
+// an array of questions for user input
 const promptUser = () => {
  return inquirer.prompt ([
     {type: "input",
-        message: "What is your github username?",
+        message: "What is your github link?",
         name: "A",
      },
         {type: 'input',
@@ -42,6 +42,11 @@ const promptUser = () => {
         message: 'what does user need to know about contributing to repo?',
         name: 'I',
       },
+        {type: 'input',
+        message: 'Ideas for improvement?',
+        name: 'J',
+      },
+      
    ]);
 };
 
@@ -49,7 +54,7 @@ const promptUser = () => {
 // ==================bits from miniproject==============================
 const init = () => {
    promptUser()
-   // Use writeFileSync method to use promises instead of a callback function
+   //promptuser runs the questions. then the bit from the miniproject promises becomes the file formated from the generatemarkdown
    .then((answers) => fs.writeFileSync('README.md', generateMarkdown(answers)))
    .then(() => console.log('Success'))
    .catch((err) => console.error(err));
