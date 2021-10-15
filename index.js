@@ -2,6 +2,7 @@ const fs= require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown')
 
+const licenseArray = [ "npm", "inquirer", "js", "MIT", ]
 
 // an array of questions for user input
 const promptUser = () => {
