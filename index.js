@@ -23,7 +23,7 @@ const promptUser = () => {
         name: 'D',
      },
         {type: 'input',
-        message: 'What licenses should the project have',  //-----maybe multichoice
+        message: 'What licenses should the project have',  //-----maybe multichoice //I choose a license for my application from a list of options
         name: 'E',
      },
         {type: 'input',
